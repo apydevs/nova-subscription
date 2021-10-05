@@ -1,0 +1,49 @@
+{
+    "name": "limedeck/nova-cashier-overview",
+    "description": "Interact with your Stripe subscriptions directly inside Nova.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "laravel/nova": "^3.0"
+    },
+    "require-dev": {
+        "limedeck/phpunit-detailed-printer": "^6.0",
+        "orchestra/testbench": "^6.18",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "LimeDeck\\NovaCashierOverview\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LimeDeck\\NovaCashierOverview\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LimeDeck\\NovaCashierOverview\\Providers\\CashierOverviewServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit tests/ -c ./phpunit.xml --coverage-text --coverage-clover clover.xml"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
